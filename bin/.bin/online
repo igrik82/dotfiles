@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+LB='\033[1;34m'
+NC='\033[0m' # No Color
+
+printf "${LB}Client online:${NC}\n"
+
+SUBNET="192.168.88."
+
+function pingit() {
+
+  target=${1}
+
+  # send stdout/stderr to /dev/null since all we need is the return code
+
+  if ping -c 1 -W 0.2 ${target} >/dev/null 2>&1; then
+    # Getting name frome host
+    nslookup ${target} | awk -F'= ' '{print $2}' | awk -F'.' '{printf $1}' && echo " - ${target}"
+    #echo "Host ${target} is online"
+  fi
+}
+
+for id_client in $(seq 2 254); do
+  # call our function and place the call in the background
+
+  pingit ${SUBNET}${id_client} &
+done
+
+# wait for all outstanding background jobs to complete before continuing
+
+wait
+
+# [optional] let operator know we're done.
+#echo "Completed."

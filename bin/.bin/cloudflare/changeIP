@@ -1,0 +1,4 @@
+curl -X PATCH "https://api.cloudflare.com/client/v4/zones/cb111119ccdfd7f585e389f29a90eed5/dns_records/faad0683adfc602d5191fba33af439c1" \
+-H "Authorization: Bearer $TOKEN" \
+-H "Content-Type:application/json" \
+--data '{"content": "85.209.0.185"}'

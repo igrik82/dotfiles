@@ -1,0 +1,2 @@
+#!/bin/env bash
+bash -c 'cd "/home/igrik/.wine/drive_c/Program Files/ADI/LTspice/";wine ./LTspice.exe'

@@ -1,0 +1,13 @@
+[Unit]
+Description=Turn off LED T9
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/igrik/.bin/led_t9/
+Environment=PYTHONPATH=/home/igrik/.bin/led_t9/venv/lib/python/site-packages
+ExecStart=/home/igrik/.bin/led_t9/venv/bin/python /home/igrik/.bin/led_t9/led.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

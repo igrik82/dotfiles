@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+TEMPERATURE_MG=$(cat /sys/class/thermal/thermal_zone1/temp) 
+TEMPERATURE=$((TEMPERATURE_MG / 1000))
+
+echo $TEMPERATURE  > /tmp/cpu_temperature
+
+OK="#[fg=$color_level_ok]"
+WARN="#[fg=$color_level_warn]"
+KRIT="#[fg=$color_level_stress]"
+DEFAULT="#[default]"
+
+
+if [ $(echo "$TEMPERATURE <= 60" | bc) -ne 0 ];then
+	echo -e "T:${OK}${TEMPERATURE}\u00b0C${DEFAULT}"
+elif [ $(echo "$TEMPERATURE <= 65" | bc) -ne 0 ];then
+	echo -e "T:${WARN}${TEMPERATURE}\u00b0C${DEFAULT}"
+else
+	echo -e "T:${KRIT}${TEMPERATURE}\u00b0C${DEFAULT}"
+fi
+
+
