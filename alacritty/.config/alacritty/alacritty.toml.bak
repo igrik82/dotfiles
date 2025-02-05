@@ -1,0 +1,39 @@
+import = ["/home/igrik/.config/alacritty/colorscheme/themes/breeze.toml"]
+
+[cursor.style]
+shape = "Beam"
+
+[font.bold]
+family = "Source Code Pro"
+style = "Bold"
+
+[font.bold_italic]
+family = "Source Code Pro"
+style = "Bold Italic"
+
+[font.italic]
+# family = "Source Code Pro"
+family = "Source Code Pro"
+style = "Italic"
+
+[font.normal]
+family = "Source Code Pro"
+# family = "MesloLGS Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "SauceCodePro Nerd Font"
+style = "Semibold"
+
+[scrolling]
+history = 10000
+
+[window]
+opacity = 0.9
+
+[window.padding]
+x = 15
+y = 10
+
+[shell]
+program = "/bin/tmux"
+args = ["-2", "-u", "new-session", "-A", "-s", "Home"]
+
