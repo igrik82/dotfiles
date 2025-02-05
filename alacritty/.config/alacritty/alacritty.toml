@@ -33,7 +33,7 @@ x = 15
 y = 10
 
 [general]
-import = ["/home/igrik/.config/alacritty/colorscheme/themes/breeze.toml"]
+import = ["~/.config/alacritty/breeze.toml"]
 
 [terminal]
 
