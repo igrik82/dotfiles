@@ -100,7 +100,7 @@ stashed = '📦$count '
 modified = '[📝](#9381ff)[$count ](red)'
 staged = '[++$count ](green)'
 renamed = '👅 $count '
-deleted = '🗑 $count '
+deleted = '[🗑](#9381ff) $count '
 
 [nodejs]
 symbol = ""
