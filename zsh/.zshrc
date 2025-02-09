@@ -17,7 +17,6 @@ source ~/.config/promt/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/promt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
-source ~/.config/promt/chezmoi.zsh
 
 #export DISPLAY=$(w -h $USER | awk '$3 ~ /:[0-9.]*/{print $3}')
 export PATH="$HOME/.bin:$PATH"
