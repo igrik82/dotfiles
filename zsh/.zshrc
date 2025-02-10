@@ -148,21 +148,18 @@ if [ -f "/usr/bin/neofetch" ]; then
 fi
 
 # Aliases
-alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias diffview="nvim -c \"lua require('lazy').load({plugins = 'diffview.nvim'})\" -c \"DiffviewOpen\""
 alias l="eza -a --icons=always"
 alias ls="eza -a --icons=always"
 alias ll="eza -lgha -m --time-style long-iso --icons=always"
 alias lt="eza -T --icons=always"
-alias svi="sudo vim"
-alias v="vim"
-alias sv="sudo nvim"
 #alias bat="batcat --theme OneHalfLight"
 alias ip='ip -c'
 alias wifi-connect='sudo wpa_supplicant -D nl80211 -c /etc/wpa_supplicant/work.conf -i wlan0&'
 alias vpn-connect='wg-quick down wg0 && wg-quick up wg0 || wg-quick up wg0'
-alias re="python3.10 /usr/bin/ranger"
 alias lsblk="lsblk --output MODEL,TYPE,NAME,SIZE,MOUNTPOINT,FSTYPE"
+alias gdu="gdu -u"
+alias gdu_disk="gdu -u -d"
 alias cd="z"
 
 # Hooks
