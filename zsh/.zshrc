@@ -1,15 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-# # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# # plugins
-# source ~/.config/promt/powerlevel10k/powerlevel10k.zsh-theme
-#
 #==================================================================
 # Prompt
 #==================================================================
@@ -158,9 +146,11 @@ alias ip='ip -c'
 alias wifi-connect='sudo wpa_supplicant -D nl80211 -c /etc/wpa_supplicant/work.conf -i wlan0&'
 alias vpn-connect='wg-quick down wg0 && wg-quick up wg0 || wg-quick up wg0'
 alias lsblk="lsblk --output MODEL,TYPE,NAME,SIZE,MOUNTPOINT,FSTYPE"
-alias gdu="gdu -u"
-alias gdu_disk="gdu -u -d"
+alias gdu="gdu -u -B"
+alias du="gdu -u -B"
+alias gdu_disk="gdu -u -d -B"
 alias cd="z"
+alias yt_plist='yt-dlp -f "bv[height<=720]+ba" --playlist-reverse -o "%(playlist_index)s - %(title)s.%(ext)s"'
 
 # Hooks
 eval "$(direnv hook zsh)"
@@ -185,7 +175,7 @@ function y() {
 
 
 #""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-# => Systemd functions
+# Systemd functions
 #""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 rpservs () {
   # STEP 1. List running services using systemctl and format the output
