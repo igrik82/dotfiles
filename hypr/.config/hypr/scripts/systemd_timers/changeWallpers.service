@@ -1,0 +1,9 @@
+[Unit]
+Description=Change wallpapers thorough SWWW
+
+[Service]
+Type=oneshot
+User=igrik
+WorkingDirectory=/home/igrik/.config/hypr/scripts/
+ExecStart=/home/igrik/.config/hypr/scripts/changeWallpaper.sh
+  
