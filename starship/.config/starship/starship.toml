@@ -18,15 +18,16 @@ format = "[   $path ]($style)"
 [time]
 disabled = false
 time_format = "%T"
-# style = "bg:peach"
-format = '🕙 [ $time ]($style) '
+style = "fg:#616161"
+format = '[ 祥$time ]($style) '
 
 [fill]
 symbol = " "
 
 [os]
 disabled = false
-style = "bg:none fg:#004d99"
+# style = "bg:none fg:#004d99"
+style = "bg:none fg:#2678eb"
 
 [direnv]
 disabled = false
@@ -64,13 +65,13 @@ RedHatEnterprise = "󱄛"
 "Developer" = "󰲋 "
 
 [custom.giturl]
-style = 'bold fg:#9381ff'
+style = 'bold fg:#5f74fa'
 # disabled = true
 description = "Display symbol for remote Git server"
 command = """
 GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
 if [[ "$GIT_REMOTE" =~ "github" ]]; then
-    GIT_REMOTE_SYMBOL=""
+    GIT_REMOTE_SYMBOL=" "
 elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
     GIT_REMOTE_SYMBOL=" "
 elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
@@ -91,16 +92,16 @@ format =  ' [$symbol$branch]($style)'
 [git_status]
 format = ' [($all_status$ahead_behind )]($style)'
 conflicted = '🏳$count '
-ahead = '[ ](#9381ff) [$count](red) '
-behind = '[ ](#9381ff)[$count](green) '
+ahead = '[󰄝](#3492eb) [$count](#fe01ff) '
+behind = '[󰄠](#3492eb)[$count](#67ff00) '
 diverged = '😵'
 # up_to_date = '[✓](green)$count '
-untracked = '🤷 $count '
-stashed = '📦$count '
-modified = '[📝](#9381ff)[$count ](red)'
-staged = '[++$count ](green)'
-renamed = '👅 $count '
-deleted = '[🗑](#9381ff) $count '
+untracked = '[ ](#3492eb)[$count](#fe01ff) '
+stashed = ' $count '
+modified = '[ ](#3492eb)[$count](#fe01ff) '
+staged = '[ ](#3492eb)[++$count](#67ff00) '
+renamed = '[ ](#3492eb)[$count](#fe01ff) '
+deleted = '[🗑](#3492eb)[$count](#fe01ff) '
 
 [nodejs]
 symbol = ""
