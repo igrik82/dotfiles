@@ -91,17 +91,17 @@ format =  ' [$symbol$branch]($style)'
 
 [git_status]
 format = ' [($all_status$ahead_behind )]($style)'
-conflicted = '🏳$count '
-ahead = '[󰄝](#3492eb) [$count](#fe01ff) '
-behind = '[󰄠](#3492eb)[$count](#67ff00) '
+conflicted = '🏳$count'
+ahead = '[󰄝](#3492eb)[$count](#fe01ff)'
+behind = '[󰄠](#3492eb)[$count](#67ff00)'
 diverged = '😵'
 # up_to_date = '[✓](green)$count '
-untracked = '[ ](#3492eb)[$count](#fe01ff) '
-stashed = ' $count '
+untracked = '[ ](#3492eb)[$count](#fe01ff)'
+stashed = ' $count'
 modified = '[ ](#3492eb)[$count](#fe01ff) '
-staged = '[ ](#3492eb)[++$count](#67ff00) '
-renamed = '[ ](#3492eb)[$count](#fe01ff) '
-deleted = '[🗑](#3492eb)[$count](#fe01ff) '
+staged = '[ ](#3492eb)[+$count](#67ff00)'
+renamed = '[ ](#3492eb)[$count](#fe01ff)'
+deleted = '[🗑](#3492eb)[$count](#fe01ff)'
 
 [nodejs]
 symbol = ""
