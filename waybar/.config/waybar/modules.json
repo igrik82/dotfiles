@@ -185,7 +185,7 @@
     "locale": "ru_RU.UTF-8",
     "timezone": "Asia/Yekaterinburg",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%d-%m-%Y}",
+    "format-alt": "{:%d.%m.%Y %H:%M}",
     "calendar": {
       "mode": "month",
       "mode-mon-col": 3,
@@ -206,7 +206,7 @@
   // temp
   "custom/temp": {
     "format": "󰔏{} 糖",
-    "on-click": "kitty"
+    "on-click": "kitty -e htop"
   },
   // CPU
   "cpu": {
@@ -223,7 +223,7 @@
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": "{percentage_used}% ",
+    "format": " {percentage_used}% ",
     "path": "/",
     "on-click": "alacritty -e htop"
   },

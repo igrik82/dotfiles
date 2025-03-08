@@ -89,7 +89,7 @@
 
     "temp": {
         "format": "{icon}{temperatureC} 糖",
-        "format-icons": ["],
+        "format-icons": []",
         "tooltip": false
     },
     "cpu": {
