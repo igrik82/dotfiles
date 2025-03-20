@@ -1,0 +1,6 @@
+[global]
+log_format = "-"
+load_dotenv = true
+
+[whitelist]
+prefix = [ "~/Projects" ]
