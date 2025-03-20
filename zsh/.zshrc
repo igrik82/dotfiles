@@ -1,11 +1,10 @@
 #==================================================================
 # Prompt
 #==================================================================
-source ~/.config/promt/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/promt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
-source ~/.config/promt/git-completion.zsh
 
 #export DISPLAY=$(w -h $USER | awk '$3 ~ /:[0-9.]*/{print $3}')
 export PATH="$HOME/.bin:$PATH"
@@ -54,9 +53,9 @@ export PATH=$PATH:~/.platformio/penv/bin
 # Enable color
 autoload -U colors && colors
 
-#""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-# => CUSTOM HISTORY
-#""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+#==============================================================
+#  CUSTOM HISTORY
+#==============================================================
 HISTSIZE=1000000000
 SAVEHIST=$HISTSIZE
 HISTFILE=~/.zsh_history
