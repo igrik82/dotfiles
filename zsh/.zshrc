@@ -9,9 +9,6 @@ source /usr/share/fzf/key-bindings.zsh
 #export DISPLAY=$(w -h $USER | awk '$3 ~ /:[0-9.]*/{print $3}')
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.bin/wineDesktop:$PATH"
-export PATH="$HOME/Projects/esp-idf/8266/xtensa-lx106-elf/bin:$PATH"
-export IDF_PATH="$HOME/Projects/esp-idf/8266/ESP8266_RTOS_SDK"
-export CPATH="build/include"
 export PATH=/home/igrik/.local/bin:$PATH
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
