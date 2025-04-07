@@ -12,7 +12,6 @@ export PATH="$HOME/.bin/wineDesktop:$PATH"
 export PATH="$HOME/Projects/esp-idf/8266/xtensa-lx106-elf/bin:$PATH"
 export IDF_PATH="$HOME/Projects/esp-idf/8266/ESP8266_RTOS_SDK"
 export CPATH="build/include"
-export PATH=/home/igrik/.version_python/.python3.11/bin:$PATH
 export PATH=/home/igrik/.local/bin:$PATH
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
