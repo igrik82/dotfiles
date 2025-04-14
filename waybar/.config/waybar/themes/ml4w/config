@@ -108,6 +108,9 @@
     "exec": "/home/igrik/.config/waybar/scripts/status_vpn.sh",
     "on-click": "/home/igrik/.config/waybar/scripts/vpn.sh",
   },
+  "network":{
+  "on-click": "/home/igrik/.config/waybar/scripts/netstat.sh",
+  },
 
   "custom/wl-gammarelay-temperature": {
     "format": "",
