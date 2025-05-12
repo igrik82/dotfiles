@@ -17,6 +17,31 @@ if exists('+termguicolors')
 endif
 ]])
 
+-------
+--- Folds
+vim.opt.viewoptions = "folds"
+vim.api.nvim_create_autocmd({ "BufWinLeave", "BufWritePost" }, {
+    pattern = "*",
+    callback = function()
+        if vim.bo.buftype == "" and vim.fn.expand("%") ~= "" then
+            local ok, err = pcall(vim.cmd, "mkview")
+            if not ok then
+                vim.notify("Failed to save view: " .. err, vim.log.levels.WARN)
+            end
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("BufWinEnter", {
+    pattern = "*",
+    callback = function()
+        if vim.bo.buftype == "" and vim.fn.expand("%") ~= "" then
+            vim.cmd("silent! loadview")
+        end
+    end,
+})
+-------
+
 local opt = vim.opt -- for conciseness
 
 --decrease log lsp messages
