@@ -146,7 +146,8 @@ alias gdu="gdu -u -B"
 alias du="gdu -u -B"
 alias gdu_disk="gdu -u -d -B"
 alias cd="z"
-alias yt_plist='yt-dlp -f "bv[height<=720]+ba" --playlist-reverse -o "%(playlist_index)s - %(title)s.%(ext)s"'
+# alias yt_plist='yt-dlp -f "bv[height<=720]+ba" --playlist-reverse -o "%(playlist_index)s - %(title)s.%(ext)s"'
+alias yt_plist='yt-dlp -f "bv[height<=720]+ba" -o "%(playlist_index)s - %(title)s.%(ext)s"'
 
 # Hooks
 eval "$(direnv hook zsh)"
