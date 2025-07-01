@@ -25,7 +25,6 @@
       "*": 5
     }
   },
-
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
@@ -42,7 +41,6 @@
       "Foot Server": "Terminal"
     }
   },
-
   // Hyprland Window
   "hyprland/window": {
     "rewrite": {
@@ -54,7 +52,6 @@
     },
     "separate-outputs": true
   },
-
   // Youtube Subscriber Count
   "custom/youtube": {
     "format": " {}",
@@ -63,7 +60,6 @@
     "on-click": "brave https://studio.youtube.com",
     "tooltip": false
   },
-
   // Cliphist
   "custom/cliphist": {
     "format": "",
@@ -72,7 +68,6 @@
     "on-click-middle": "sleep 0.1 && ~/.config/scripts/cliphist.sh w",
     "tooltip": false
   },
-
   // Updates Count
   "custom/updates": {
     "format": "  {}",
@@ -84,85 +79,74 @@
     "on-click": "alacritty -e ~/.config/scripts/installupdates.sh",
     "tooltip": false
   },
-
   // Wallpaper
+  "min-length": 7,
   "custom/wallpaper": {
     "format": "",
     "on-click": "~/.config/scripts/wallpaper-swww.sh",
     "on-click-right": "~/.config/scripts/updatewal-swww.sh",
     "tooltip": false
   },
-
   // Waybar Themes
   "custom/waybarthemes": {
     "format": "",
     "on-click": "~/.config/waybar/themeswitcher.sh",
     "tooltip": false
   },
-
   // Filemanager Launcher
   "custom/filemanager": {
     "format": "",
     "on-click": "nemo",
     "tooltip": false
   },
-
   // Outlook Launcher
   "custom/outlook": {
     "format": "",
     "on-click": "brave --app=https://outlook.office.com/mail/",
     "tooltip": false
   },
-
   // Teams Launcher
   "custom/teams": {
     "format": "",
     "on-click": "chromium --app=https://teams.microsoft.com/go",
     "tooltip": false
   },
-
   // Brave Launcher
   "custom/brave": {
     "format": "",
     "on-click": "brave",
     "tooltip": false
   },
-
   // ChatGPT Launcher
   "custom/chatgpt": {
     "format": "",
     "on-click": "brave --app=https://chat.openai.com",
     "tooltip": false
   },
-
   // Rofi Calculator
   "custom/calculator": {
     "format": "",
     "on-click": "~/.config/scripts/calculator.sh",
     "tooltip": false
   },
-
   // Windows VM
   "custom/windowsvm": {
     "format": "",
     "on-click": "~/.config/scripts/launchvm.sh",
     "tooltip": false
   },
-
   // Rofi Application Launcher
   "custom/appmenu": {
     "format": "󰣇",
     "on-click": "~/.config/rofi/launchers/type-full/launcher.sh",
     "tooltip": false
   },
-
   // Power Menu
   "custom/exit": {
     "format": "",
     "on-click": "wlogout",
     "tooltip": false
   },
-
   // Keyboard State
   "keyboard-state": {
     "numlock": true,
@@ -173,13 +157,11 @@
       "unlocked": ""
     }
   },
-
   // System tray
   "tray": {
     // "icon-size": 21,
     "spacing": 10
   },
-
   // Clock
   "clock": {
     "locale": "ru_RU.UTF-8",
@@ -202,32 +184,34 @@
       "on-click-right": "mode"
     }
   },
-
   // temp
   "custom/temp": {
+    "min-length": 6,
     "format": "󰔏{} 糖",
     "on-click": "kitty -e htop"
   },
   // CPU
   "cpu": {
-    "format": " 󰍛 {usage}% ",
+    "min-length": 6,
+    "interval": 30,
+    "format": "󰍛 {usage}%",
     "on-click": "alacritty -e htop"
   },
-
   // Memory
   "memory": {
-    "format": " {}% ",
+    "min-length": 6,
+    "interval": 30,
+    "format": " {}%",
     "on-click": "alacritty -e htop"
   },
-
   // Harddisc space used
   "disk": {
+    "min-length": 8,
     "interval": 30,
-    "format": " {percentage_used}% ",
+    "format": " {percentage_used}%",
     "path": "/",
     "on-click": "alacritty -e htop"
   },
-
   // Network
   "network": {
     "format": "{ifname}",
@@ -240,7 +224,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
-
   // Battery
   "battery": {
     "states": {
@@ -256,30 +239,29 @@
     // "format-full": "",
     "format-icons": [" ", " ", " ", " ", " "]
   },
-
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
+    "min-length": 7,
     "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format-muted": "󰖁   {volume}%",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "default": ["", " ", " "]
+      "default": ["", " ", " "]
     },
     "on-click": "pavucontrol"
   },
-
   // Bluetooth
   "bluetooth": {
+    "min-length": 1,
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
     "on-click": "blueman-manager"
   },
-
   // Other
   "user": {
     "format": "{user}",
