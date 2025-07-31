@@ -41,7 +41,6 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
     end,
 })
 -------
-
 local opt = vim.opt -- for conciseness
 
 --decrease log lsp messages
@@ -98,5 +97,5 @@ opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 
 --Set cursorlinr and colomn
--- opt.cursorline = true
+opt.cursorline = true
 -- opt.cursorcolumn = true
