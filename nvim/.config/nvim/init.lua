@@ -32,3 +32,7 @@ require("lazy").setup("plugins", {
 		notify = false,
 	},
 })
+
+-- Set current line number to color
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f8660d", bg = "NONE" })
+vim.api.nvim_set_hl(0, "CursorLine", { fg = "NONE", bg = "NONE" })
