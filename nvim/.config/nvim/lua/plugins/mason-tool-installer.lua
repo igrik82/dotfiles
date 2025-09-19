@@ -21,10 +21,15 @@ return {
 		end
 
 		require("mason-tool-installer").setup({
-			ensure_installed = {
-				packet(),
-			},
-			auto_update = true,
+			            ensure_installed = {
+			                "prettier", -- ts/js formatter
+			                "stylua", -- lua formatter
+			                "eslint_d", -- ts/js linter
+			                "clang-format", -- C formater
+			                "shfmt", -- Shell formatter
+			                "shellcheck", -- Shell linter
+							packet(),
+						},			auto_update = true,
 			run_on_start = true,
 		})
 	end,

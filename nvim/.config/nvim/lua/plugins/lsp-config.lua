@@ -52,18 +52,7 @@ return {
         "jay-babu/mason-null-ls.nvim",
         ft = { "lua", "python", "sh", "c", "cpp", "arduino", "html", "css" },
         config = function()
-            require("mason-null-ls").setup({
-                ensure_installed = {
-                    "prettier", -- ts/js formatter
-                    "stylua", -- lua formatter
-                    "eslint_d", -- ts/js linter
-                    "clang-format", -- C formater
-                    "shfmt", -- Shell formatter
-                    "shellcheck", -- Shell linter
-                },
-                -- auto-install configured formatters & linters (with null-ls)
-                automatic_installation = true,
-            })
+            require("mason-null-ls").setup({})
         end,
     },
     {
